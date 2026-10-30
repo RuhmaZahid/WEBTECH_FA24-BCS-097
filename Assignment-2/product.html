@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santos Brazil Estate — BeanCo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fa-solid fa-mug-hot me-2" style="color: var(--brown-warm)"></i>BeanCo
+        </a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-4 py-2 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Shop Coffee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="product.html">Single Origin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Story</a>
+            </li>
+            <li class="nav-item mt-2 mt-lg-0">
+              <a class="btn-cart" href="#">
+                <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+                <span class="cart-badge">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a
+              href="index.html"
+              class="text-decoration-none"
+              style="color: var(--brown-mid)"
+              >Home</a
+            >
+          </li>
+          <li class="breadcrumb-item">
+            <a
+              href="index.html"
+              class="text-decoration-none"
+              style="color: var(--brown-mid)"
+              >Shop</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Santos Brazil Estate
+          </li>
+        </ol>
+      </nav>
+
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="product-card border-0 shadow-sm overflow-hidden">
+            <div
+              style="
+                aspect-ratio: 4 / 3;
+                width: 100%;
+                overflow: hidden;
+                background: #e8e0d5;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1000&h=750&fit=crop&auto=format&q=85"
+                alt="Santos Brazil Estate Coffee Bag"
+                class="w-100 h-100 object-fit-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="ps-lg-3">
+            <span class="roast-badge mb-2">Medium Roast · Single Origin</span>
+            <h1
+              class="font-playfair display-6 fw-bold mb-2"
+              style="
+                font-family: &quot;Playfair Display&quot;, serif;
+                color: var(--brown-deep);
+              "
+            >
+              Santos Brazil Estate
+            </h1>
+            <div class="product-price fs-3 mb-3">Rs1800.00</div>
+
+            <p class="text-muted mb-4">
+              Harvested from the high-altitude volcanic slopes of the Santos
+              region, this exceptional estate coffee delivers a wonderfully
+              smooth and balanced cup. Masterfully roasted in small batches to
+              highlight natural sweetness and rich aromatic profiles.
+            </p>
+
+            <div
+              class="p-3 mb-4 rounded-3"
+              style="
+                background-color: #f1ebd9;
+                border: 1px solid rgba(124, 74, 30, 0.15);
+              "
+            >
+              <h6 class="fw-bold mb-2" style="color: var(--brown-deep)">
+                <i class="fa-solid fa-seedling me-2 text-warning"></i>Tasting
+                Notes & Profile
+              </h6>
+              <p class="small mb-0 text-muted">
+                Milk chocolate, caramel sweetness, roasted almonds, and a clean,
+                lingering nutty finish.
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="grindSelect"
+                class="form-label fw-semibold small text-uppercase tracking-wider"
+                >Select Grind Size</label
+              >
+              <select id="grindSelect" class="form-select form-select-sm py-2">
+                <option selected>Whole Bean (Recommended for freshness)</option>
+                <option value="espresso">Espresso (Fine)</option>
+                <option value="drip">Drip / Filter (Medium)</option>
+                <option value="frenchpress">French Press (Coarse)</option>
+              </select>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-4 col-sm-3">
+                <label for="qtyInput" class="visually-hidden">Quantity</label>
+                <input
+                  type="number"
+                  id="qtyInput"
+                  class="form-control text-center py-2"
+                  value="1"
+                  min="1"
+                  max="10"
+                />
+              </div>
+              <div class="col-8 col-sm-9">
+                <button class="btn btn-add w-100 py-2.5 fs-6 shadow-sm">
+                  <i class="fa-solid fa-cart-shopping me-2"></i>Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-top text-muted small">
+              <p class="mb-1">
+                <i class="fa-solid fa-truck-fast me-2 text-success"></i> Free
+                shipping on orders over $35
+              </p>
+              <p class="mb-0">
+                <i class="fa-solid fa-rotate-left me-2 text-primary"></i>
+                Freshness guaranteed or your roast replaced
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h5>BeanCo</h5>
+            <p>
+              Craft specialty coffee roasted fresh weekly in small batches for
+              peak flavor and freshness.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html">Shop All Coffee</a></li>
+              <li class="mb-2">
+                <a href="product.html">Single Origin Details</a>
+              </li>
+              <li class="mb-2"><a href="#">Wholesale Inquiries</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Stay Connected</h5>
+            <p>Subscribe for brewing tips and new harvest alerts.</p>
+            <div class="input-group input-group-sm">
+              <input
+                type="email"
+                class="form-control footer-input"
+                placeholder="Your email"
+              />
+              <button class="btn btn-outline-light" type="button">Join</button>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">&copy; 2026 BeanCo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
