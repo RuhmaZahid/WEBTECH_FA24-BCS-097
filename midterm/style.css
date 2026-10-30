@@ -290,7 +290,7 @@ footer .copyright {
   color: var(--accent-color);
 }
 
-/* Selected label styling using accent colour H */
+
 #cat-all:checked ~ label[for="cat-all"],
 #cat-light:checked ~ label[for="cat-light"],
 #cat-medium:checked ~ label[for="cat-medium"],
@@ -301,7 +301,6 @@ footer .copyright {
   border-color: var(--accent-color);
 }
 
-/* Corrected filtering rule using :has() on the container */
 .filter-container:has(#cat-light:checked)
   ~ .product-grid
   .product-item:not([data-category="light"]),
@@ -322,3 +321,46 @@ footer .copyright {
   overflow: hidden !important;
 }
 
+
+.product-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  gap: 30px;
+}
+
+.product-image-area {
+  grid-area: image;
+}
+
+.product-details-area {
+  grid-area: details;
+}
+
+.product-description-area {
+  grid-area: description;
+}
+
+@media (min-width: 697px) {
+  .product-grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image details"
+      "description description";
+    align-items: start;
+    gap: 40px;
+  }
+
+  .product-details-area {
+    position: sticky;
+    top: 87px; /* (97 mod 40) + 70 = 87px */
+    z-index: 10;
+  }
+
+  .product-description-area {
+    position: static;
+  }
+}
