@@ -263,3 +263,62 @@ footer .copyright {
   border-color: var(--brown-warm);
   color: #fff;
 }
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.filter-radio {
+  display: none;
+}
+.filter-label {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--cream-card);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: var(--ease);
+}
+.filter-label:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Selected label styling using accent colour H */
+#cat-all:checked ~ label[for="cat-all"],
+#cat-light:checked ~ label[for="cat-light"],
+#cat-medium:checked ~ label[for="cat-medium"],
+#cat-dark:checked ~ label[for="cat-dark"],
+#cat-espresso:checked ~ label[for="cat-espresso"] {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* Corrected filtering rule using :has() on the container */
+.filter-container:has(#cat-light:checked)
+  ~ .product-grid
+  .product-item:not([data-category="light"]),
+.filter-container:has(#cat-medium:checked)
+  ~ .product-grid
+  .product-item:not([data-category="medium"]),
+.filter-container:has(#cat-dark:checked)
+  ~ .product-grid
+  .product-item:not([data-category="dark"]),
+.filter-container:has(#cat-espresso:checked)
+  ~ .product-grid
+  .product-item:not([data-category="espresso"]) {
+  display: none !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
